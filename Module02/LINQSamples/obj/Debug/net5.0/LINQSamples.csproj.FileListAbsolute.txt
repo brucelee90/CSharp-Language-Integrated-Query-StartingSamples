@@ -1,0 +1,15 @@
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/bin/Debug/net5.0/LINQSamples.deps.json
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/bin/Debug/net5.0/LINQSamples.runtimeconfig.json
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/bin/Debug/net5.0/LINQSamples.runtimeconfig.dev.json
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/bin/Debug/net5.0/LINQSamples.dll
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/bin/Debug/net5.0/ref/LINQSamples.dll
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/bin/Debug/net5.0/LINQSamples.pdb
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.csproj.AssemblyReference.cache
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.GeneratedMSBuildEditorConfig.editorconfig
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.AssemblyInfoInputs.cache
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.AssemblyInfo.cs
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.csproj.CoreCompileInputs.cache
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.dll
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/ref/LINQSamples.dll
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.pdb
+/Users/leeklopfers/Projects/CSharp-Language-Integrated-Query-StartingSamples/Module02/LINQSamples/obj/Debug/net5.0/LINQSamples.genruntimeconfig.cache
