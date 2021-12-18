@@ -27,8 +27,12 @@ namespace LINQSamples
     /// </summary>
     public void GetAllLooping()
     {
-      List<Product> list = new List<Product>();
+        List<Product> list = new List<Product>();
 
+            foreach (Product item in Products)
+            {
+                list.Add(item);
+            }
 
      
       ResultText = $"Total Products: {list.Count}";
@@ -44,11 +48,13 @@ namespace LINQSamples
       List<Product> list = new List<Product>();
 
       if (UseQuerySyntax) {
-        // Query Syntax
+            // Query Syntax
+            list = (from prod in Products select prod).ToList();
         
       }
       else {
-        // Method Syntax
+                // Method Syntax
+                list = Products.Select(product => product).ToList();
         
       }
 
@@ -66,11 +72,12 @@ namespace LINQSamples
       List<string> list = new List<string>();
 
       if (UseQuerySyntax) {
-        // Query Syntax
-        
+                // Query Syntax
+                list = (from product in Products select product.Name).ToList();
       }
       else {
-        // Method Syntax
+                // Method Syntax
+                list = Products.Select(prod => prod.Name).ToList();
         
       }
 
@@ -90,11 +97,24 @@ namespace LINQSamples
     public void GetSpecificColumns()
     {
       if (UseQuerySyntax) {
-        // Query Syntax
+                // Query Syntax
+                Products = (from product in Products
+                            select new Product
+                            {
+                                ProductID = product.ProductID,
+                                Name = product.Name,
+                                Size = product.Size
+                            }).ToList();
        
       }
       else {
-        // Method Syntax
+                // Method Syntax
+                Products = Products.Select(prod => new Product
+                {
+                    ProductID = prod.ProductID,
+                    Name = prod.Name,
+                    Size = prod.Size
+                }).ToList();
        
       }
 
@@ -112,23 +132,35 @@ namespace LINQSamples
 
       if (UseQuerySyntax) {
         // Query Syntax
-        
+        var products = (from prod in Products select new
+        {
+            Identifier = prod.ProductID,
+            ProductName = prod.Name,
+            ProductSize = prod.Size
+        });
+
         // Loop through anonymous class
-        //foreach (var prod in products) {
-        //  sb.AppendLine($"Product ID: {prod.Identifier}");
-        //  sb.AppendLine($"   Product Name: {prod.ProductName}");
-        //  sb.AppendLine($"   Product Size: {prod.ProductSize}");
-        //}
+        foreach (var prod in products) {
+          sb.AppendLine($"Product ID: {prod.Identifier}");
+          sb.AppendLine($"  Product Name: {prod.ProductName}");
+          sb.AppendLine($"  Product Size: {prod.ProductSize}");
+        }
       }
       else {
-        // Method Syntax
+                // Method Syntax
+                var products = Products.Select(prod => new
+                {
+                    Identifier = prod.ProductID,
+                    ProductName = prod.Name,
+                    ProductSize = prod.Size
+                });
         
         // Loop through anonymous class
-        //foreach (var prod in products) {
-        //  sb.AppendLine($"Product ID: {prod.Identifier}");
-        //  sb.AppendLine($"   Product Name: {prod.ProductName}");
-        //  sb.AppendLine($"   Product Size: {prod.ProductSize}");
-        //}
+        foreach (var prod in products) {
+          sb.AppendLine($"Product ID: {prod.Identifier}");
+          sb.AppendLine($"   Product Name: {prod.ProductName}");
+          sb.AppendLine($"   Product Size: {prod.ProductSize}");
+        }
       }
 
       ResultText = sb.ToString();
@@ -143,11 +175,16 @@ namespace LINQSamples
     public void OrderBy()
     {
       if (UseQuerySyntax) {
-        // Query Syntax
-
+                // Query Syntax
+                Products = (
+                    from product in Products
+                    orderby product.Name
+                    select product)
+                    .ToList();
       }
       else {
-        // Method Syntax
+                // Method Syntax
+                Products = Products.OrderBy(product => product).ToList();
 
       }
 
@@ -162,12 +199,15 @@ namespace LINQSamples
     public void OrderByDescending()
     {
       if (UseQuerySyntax) {
-        // Query Syntax
-
+                // Query Syntax
+                Products = (from prod in Products
+                            orderby prod.Name descending
+                            select prod
+                            ).ToList();
       }
       else {
-        // Method Syntax
-
+                // Method Syntax
+                Products = Products.OrderByDescending(prod => prod.Name).ToList();
       }
 
       ResultText = $"Total Products: {Products.Count}";
